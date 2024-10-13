@@ -1,8 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
-import CharacterDetails from "./character-details";
+import CharacterDetail from "./character-detail";
 function CharacterDetailsWrapper() {
     let params = useParams();
+    const {id} = params;
+    console.log(id);
     let navigate = useNavigate();
-    return <CharacterDetails params={params} navigate={navigate} />
+    return <CharacterDetail characterID={id} />
 };
 export default CharacterDetailsWrapper;
